@@ -6,19 +6,19 @@
 <div class="container" style="min-height: calc(100vh - 250px); display: flex; align-items: center; padding: 40px 0;">
     <div class="row justify-content-center w-100">
         <div class="col-md-6 col-lg-5">
-            <div class="card shadow-lg" style="border-radius: 20px; border: none; overflow: hidden;">
+            <div class="card">
                 <!-- Card Header -->
-                <div class="card-header text-white text-center py-4" style="background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%); border: none;">
+                <div class="card-header bg-primary text-white text-center py-4">
                     <i class="fas fa-user-plus fa-3x mb-3"></i>
-                    <h3 class="fw-bold mb-0">Create Account</h3>
+                    <h3 class="mb-0">Create Account</h3>
                     <p class="mb-0 mt-2">Join us and start shopping today!</p>
                 </div>
                 
                 <!-- Card Body -->
-                <div class="card-body p-5">
+                <div class="card-body p-4">
                     <!-- Error Messages -->
                     @if($errors->any())
-                        <div class="alert alert-danger" style="border-radius: 10px; border-left: 4px solid #ef4444;">
+                        <div class="alert alert-danger">
                             <i class="fas fa-exclamation-circle"></i> <strong>Please fix the following:</strong>
                             <ul class="mb-0 mt-2">
                                 @foreach($errors->all() as $error)
@@ -33,14 +33,13 @@
                         @csrf
                         
                         <!-- Full Name -->
-                        <div class="mb-4">
-                            <label for="name" class="form-label fw-bold">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">
                                 <i class="fas fa-user"></i> Full Name
                             </label>
                             <input type="text" class="form-control @error('name') is-invalid @enderror" 
                                    id="name" name="name" value="{{ old('name') }}" 
                                    placeholder="Enter your full name" 
-                                   style="border-radius: 10px; padding: 12px 20px; border: 2px solid #e5e7eb;" 
                                    required autofocus>
                             @error('name')
                                 <div class="invalid-feedback">{{ $message }}</div>
@@ -48,14 +47,13 @@
                         </div>
 
                         <!-- Email -->
-                        <div class="mb-4">
-                            <label for="email" class="form-label fw-bold">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">
                                 <i class="fas fa-envelope"></i> Email Address
                             </label>
                             <input type="email" class="form-control @error('email') is-invalid @enderror" 
                                    id="email" name="email" value="{{ old('email') }}" 
                                    placeholder="your@email.com" 
-                                   style="border-radius: 10px; padding: 12px 20px; border: 2px solid #e5e7eb;" 
                                    required>
                             @error('email')
                                 <div class="invalid-feedback">{{ $message }}</div>
@@ -63,36 +61,34 @@
                         </div>
 
                         <!-- Phone (Optional) -->
-                        <div class="mb-4">
-                            <label for="phone" class="form-label fw-bold">
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">
                                 <i class="fas fa-phone"></i> Phone Number <span class="text-muted">(Optional)</span>
                             </label>
                             <input type="text" class="form-control @error('phone') is-invalid @enderror" 
                                    id="phone" name="phone" value="{{ old('phone') }}" 
-                                   placeholder="e.g., 9876543210" 
-                                   style="border-radius: 10px; padding: 12px 20px; border: 2px solid #e5e7eb;">
+                                   placeholder="e.g., 9876543210">
                             @error('phone')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
 
                         <!-- Address (Optional) -->
-                        <div class="mb-4">
-                            <label for="address" class="form-label fw-bold">
+                        <div class="mb-3">
+                            <label for="address" class="form-label">
                                 <i class="fas fa-map-marker-alt"></i> Address <span class="text-muted">(Optional)</span>
                             </label>
                             <textarea class="form-control @error('address') is-invalid @enderror" 
                                       id="address" name="address" rows="2" 
-                                      placeholder="Your delivery address" 
-                                      style="border-radius: 10px; padding: 12px 20px; border: 2px solid #e5e7eb;">{{ old('address') }}</textarea>
+                                      placeholder="Your delivery address">{{ old('address') }}</textarea>
                             @error('address')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
 
                         <!-- Password -->
-                        <div class="mb-4">
-                            <label for="password" class="form-label fw-bold">
+                        <div class="mb-3">
+                            <label for="password" class="form-label">
                                 <i class="fas fa-lock"></i> Password
                             </label>
                             <input type="password" class="form-control @error('password') is-invalid @enderror" 
@@ -103,9 +99,6 @@
                             @error('password')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
-                            <small class="text-muted">
-                                <i class="fas fa-info-circle"></i> Use at least 8 characters
-                            </small>
                         </div>
 
                         <!-- Confirm Password -->

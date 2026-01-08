@@ -7,9 +7,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
+        html {
+            height: 100%;
+        }
         body {
             font-family: Arial, sans-serif;
             background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
         }
         .navbar {
             background-color: #0d6efd !important;
@@ -49,8 +56,12 @@
             font-weight: bold;
             color: #0d6efd;
         }
+        main {
+            flex: 1;
+        }
         footer {
             background-color: #212529;
+            margin-top: auto;
         }
     </style>
 </head>

@@ -19,52 +19,40 @@
     </div>
 
     <!-- Statistics Cards -->
-    <div class="row g-4 mb-4">
-        <div class="col-xl-3 col-md-6">
-            <div class="stat-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                <div class="d-flex justify-content-between align-items-start">
-                    <div>
-                        <h6 class="text-white-50 mb-2">Total Products</h6>
-                        <h2 class="fw-bold mb-0">{{ $totalProducts }}</h2>
-                        <small><i class="fas fa-boxes"></i> In Stock</small>
-                    </div>
-                    <i class="fas fa-box-open"></i>
+    <div class="row mb-4">
+        <div class="col-xl-3 col-md-6 mb-3">
+            <div class="card border-primary">
+                <div class="card-body">
+                    <h6 class="text-muted mb-2">Total Products</h6>
+                    <h3 class="mb-0">{{ $totalProducts }}</h3>
+                    <small class="text-muted"><i class="fas fa-boxes"></i> In Stock</small>
                 </div>
             </div>
         </div>
-        <div class="col-xl-3 col-md-6">
-            <div class="stat-card" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-                <div class="d-flex justify-content-between align-items-start">
-                    <div>
-                        <h6 class="text-white-50 mb-2">Total Orders</h6>
-                        <h2 class="fw-bold mb-0">{{ $totalOrders }}</h2>
-                        <small><i class="fas fa-shopping-cart"></i> Processed</small>
-                    </div>
-                    <i class="fas fa-shopping-bag"></i>
+        <div class="col-xl-3 col-md-6 mb-3">
+            <div class="card border-success">
+                <div class="card-body">
+                    <h6 class="text-muted mb-2">Total Orders</h6>
+                    <h3 class="mb-0">{{ $totalOrders }}</h3>
+                    <small class="text-muted"><i class="fas fa-shopping-cart"></i> Processed</small>
                 </div>
             </div>
         </div>
-        <div class="col-xl-3 col-md-6">
-            <div class="stat-card" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);">
-                <div class="d-flex justify-content-between align-items-start">
-                    <div>
-                        <h6 class="text-white-50 mb-2">Total Users</h6>
-                        <h2 class="fw-bold mb-0">{{ $totalUsers }}</h2>
-                        <small><i class="fas fa-users"></i> Registered</small>
-                    </div>
-                    <i class="fas fa-user-friends"></i>
+        <div class="col-xl-3 col-md-6 mb-3">
+            <div class="card border-primary">
+                <div class="card-body">
+                    <h6 class="text-muted mb-2">Total Users</h6>
+                    <h3 class="mb-0">{{ $totalUsers }}</h3>
+                    <small class="text-muted"><i class="fas fa-users"></i> Registered</small>
                 </div>
             </div>
         </div>
-        <div class="col-xl-3 col-md-6">
-            <div class="stat-card" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
-                <div class="d-flex justify-content-between align-items-start">
-                    <div>
-                        <h6 class="text-white-50 mb-2">Total Revenue</h6>
-                        <h2 class="fw-bold mb-0">₹{{ number_format($totalRevenue, 0) }}</h2>
-                        <small><i class="fas fa-chart-line"></i> Earnings</small>
-                    </div>
-                    <i class="fas fa-rupee-sign"></i>
+        <div class="col-xl-3 col-md-6 mb-3">
+            <div class="card border-warning">
+                <div class="card-body">
+                    <h6 class="text-muted mb-2">Total Revenue</h6>
+                    <h3 class="mb-0">₹{{ number_format($totalRevenue, 0) }}</h3>
+                    <small class="text-muted"><i class="fas fa-chart-line"></i> Earnings</small>
                 </div>
             </div>
         </div>
