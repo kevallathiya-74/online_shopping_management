@@ -5,21 +5,21 @@
 @section('content')
 <div class="container">
     <!-- Hero Section -->
-    <div class="row mb-5">
+    <div class="row mb-4">
         <div class="col-12">
-            <div class="card shadow-lg" style="background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%); color: white; border-radius: 20px;">
-                <div class="card-body text-center py-5">
-                    <h1 class="display-4 fw-bold mb-3"><i class="fas fa-shopping-bag"></i> Welcome to ShopEasy</h1>
-                    <p class="lead mb-0">Discover amazing products at great prices!</p>
+            <div class="card bg-primary text-white">
+                <div class="card-body text-center py-4">
+                    <h1 class="h2 mb-2"><i class="fas fa-shopping-bag"></i> Welcome to ShopEasy</h1>
+                    <p class="mb-0">Discover amazing products at great prices!</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Categories Filter -->
-    <div class="row mb-5">
+    <div class="row mb-4">
         <div class="col-md-12">
-            <h4 class="mb-3 fw-bold"><i class="fas fa-filter"></i> Shop by Category</h4>
+            <h4 class="mb-3"><i class="fas fa-filter"></i> Shop by Category</h4>
             <div class="d-flex flex-wrap">
                 <a href="{{ route('home') }}" class="btn btn-outline-primary category-btn {{ !isset($category) ? 'active' : '' }}">
                     <i class="fas fa-th"></i> All Products
